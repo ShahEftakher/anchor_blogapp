@@ -1,0 +1,49 @@
+{
+  "version": "0.1.0",
+  "name": "anchor_blog",
+  "instructions": [
+    {
+      "name": "createAccount",
+      "accounts": [
+        { "name": "userProfile", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": true },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": []
+    },
+    {
+      "name": "createPost",
+      "accounts": [
+        { "name": "blogPost", "isMut": true, "isSigner": false },
+        { "name": "userProfile", "isMut": false, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": true },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [{ "name": "content", "type": "string" }]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "UserProfile",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "userAddress", "type": "publicKey" },
+          { "name": "postCount", "type": "u32" }
+        ]
+      }
+    },
+    {
+      "name": "BlogPost",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "postedBy", "type": "publicKey" },
+          { "name": "content", "type": "string" },
+          { "name": "like", "type": "u8" }
+        ]
+      }
+    }
+  ],
+  "metadata": { "address": "12cvQQzvjJDW7JMiJ71hSnnmMzCo9vM7d7zcmmQtaojW" }
+}

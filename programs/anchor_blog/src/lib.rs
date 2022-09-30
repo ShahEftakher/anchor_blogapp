@@ -4,7 +4,7 @@ mod state;
 mod instructions;
 use crate::instructions::*;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("12cvQQzvjJDW7JMiJ71hSnnmMzCo9vM7d7zcmmQtaojW");
 
 #[program]
 pub mod anchor_blog {
