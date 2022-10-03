@@ -1,3 +1,5 @@
+import '../styles/globals.css';
+import '@solana/wallet-adapter-react-ui/styles.css';
 import type { AppProps } from 'next/app';
 import { LOCAL_NET } from '../constants';
 import { useMemo } from 'react';
@@ -11,8 +13,7 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from '@solana/wallet-adapter-react';
-require('@solana/wallet-adapter-react-ui/styles.css');
-import '../styles/globals.css';
+
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const network = LOCAL_NET;
