@@ -1,13 +1,13 @@
 use anchor_lang::prelude::*;
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 #[account]
 pub struct UserProfile {
     pub user_address: Pubkey,
     pub post_count: u32,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 #[account]
 pub struct BlogPost {
     pub posted_by: Pubkey,
